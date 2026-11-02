@@ -1,0 +1,3103 @@
+<CTYPEOCTYPE html>
+<html lang="ar" dir="rtl">
+  
+<head>
+  
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="متجر إلكتروني متكامل">
+
+    <meta name="author"
+          content="متجري الإلكتروني">
+
+    <title>متجري الإلكتروني</title>
+
+    <style>
+========================================================
+   RESET
+========================================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    line-height:1.7;
+    background:#f5f7fb;
+    color:#222;
+}
+
+img,
+video{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+button,
+.primary-button,
+.secondary-button{
+    cursor:pointer;
+}
+
+ul{
+    list-style:none;
+}
+
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+:root{
+    --main:#2563eb;
+    --dark:#111827;
+    --light:#f8fafc;
+    --white:#fff;
+    --gray:#64748b;
+    --border:#e2e8f0;
+    --danger:#dc2626;
+    --success:#16a34a;
+    --radius:14px;
+    --shadow:0 8px 25px #00000012;
+    --width:1200px;
+}
+
+.site-header,
+main,
+.site-footer{
+    width:100%;
+}
+
+.content-section,
+.features-section,
+.offer-section,
+.featured-product,
+.management-section,
+.checkout-section,
+.account-section,
+.reviews-section,
+.contact-section,
+.cart-section{
+    width:min(var(--width),92%);
+    margin:70px auto;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-header p,
+.small-title{
+    color:var(--main);
+    font-weight:bold;
+}
+
+.section-header h2{
+    font-size:2rem;
+    color:var(--dark);
+}
+
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+    background:var(--white);
+    box-shadow:var(--shadow);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.top-header{
+    width:min(var(--width),92%);
+    margin:auto;
+    min-height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.5rem;
+    font-weight:bold;
+    color:var(--dark);
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.search-form{
+    display:flex;
+    flex:1;
+    max-width:500px;
+}
+
+.search-form label{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.search-form input{
+    flex:1;
+}
+
+.search-form input,
+.form-group input,
+.form-group select,
+.form-group textarea,
+.account-form input,
+.contact-form input,
+.contact-form textarea,
+.management-form input,
+.management-form select,
+.management-form textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:9px;
+    outline:none;
+    background:#fff;
+}
+
+.search-form button,
+.account-form button,
+.contact-form button{
+    border:0;
+    padding:0 20px;
+    background:var(--main);
+    color:#fff;
+    border-radius:9px;
+}
+
+.header-actions{
+    display:flex;
+    gap:18px;
+}
+
+.header-actions a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:.9rem;
+}
+
+.main-navigation{
+    background:var(--dark);
+}
+
+.main-navigation ul{
+    width:min(var(--width),92%);
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.main-navigation a{
+    display:block;
+    color:#fff;
+    padding:13px 15px;
+}
+
+.main-navigation a:hover{
+    background:var(--main);
+}
+
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button{
+    display:inline-block;
+    border:0;
+    padding:12px 25px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.primary-button{
+    background:var(--main);
+    color:#fff;
+}
+
+.secondary-button{
+    background:#e2e8f0;
+    color:var(--dark);
+}
+
+.primary-button:hover,
+.search-form button:hover,
+.account-form button:hover,
+.contact-form button:hover{
+    opacity:.85;
+}
+
+
+
+
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section{
+    width:min(var(--width),92%);
+    margin:50px auto;
+    padding:55px;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    color:var(--dark);
+    line-height:1.2;
+    margin:12px 0;
+}
+
+.hero-description{
+    color:var(--gray);
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    max-height:400px;
+    object-fit:cover;
+    border-radius:var(--radius);
+}
+
+
+
+/* =========================================================
+   FEATURES / CARDS
+========================================================= */
+
+.features-section,
+.category-grid,
+.products-grid,
+.media-grid,
+.reviews-grid,
+.footer-grid{
+    display:grid;
+    gap:20px;
+}
+
+.features-section{
+    width:min(var(--width),92%);
+    margin:50px auto;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.feature-card,
+.category-card,
+.product-card,
+.review-card,
+.tracking-card,
+.invoice-card,
+.employee-card,
+.permission-card,
+.remote-order-card,
+.checkout-form{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.feature-card,
+.category-card,
+.review-card{
+    padding:25px;
+}
+
+.feature-card{
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:2rem;
+}
+
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.category-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.category-card{
+    text-align:center;
+    transition:.3s;
+}
+
+.category-card:hover,
+.product-card:hover,
+.review-card:hover{
+    transform:translateY(-5px);
+}
+
+.category-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.category-card figcaption{
+    font-size:1.2rem;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+
+
+/* =========================================================
+   OFFER
+======================================================= */
+
+.offer-section,
+.featured-product{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    padding:35px;
+    background:var(--dark);
+    color:#cc1;
+    border-radiuvarar(--radius);
+}
+
+.offer-image,
+.offer-content,
+.featured-product figure,
+.featured-product article{
+    flex:1;
+  
+}
+
+.offer-image img,
+.featured-product img{
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    border-radius:var(--radius);
+}
+
+.offer-content h2,
+.featured-product h2{
+    font-size:2rem;
+    margin:10px 0;
+}
+
+.offer-content time{
+    display:block;
+    margin:15px 0;
+}
+
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.product-layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:25px;
+}
+
+.filter-sidebar{
+    background:#fff;
+    padding:20px;
+    height:max-content;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+}
+
+.filter-sidebar details{
+    padding:15px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.filter-sidebar label{
+    display:block;
+    margin:8px 0;
+}
+
+.products-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.product-card{
+    overflow:hidden;
+    transition:.3s;
+}
+
+.product-image{
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.discount{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:var(--danger);
+    color:#fff;
+    padding:5px 10px;
+    border-radius:7px;
+    z-index:2;
+}
+
+.product-details{
+    padding:18px;
+}
+
+.product-category{
+    color:var(--gray);
+    font-size:.85rem;
+}
+
+.product-details h3{
+    margin:5px 0;
+}
+
+.rating{
+    color:#f59e0b;
+}
+
+.product-price{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:12px 0;
+}
+
+.product-price strong{
+    font-size:1.2rem;
+}
+
+.product-price del{
+    color:var(--gray);
+}
+
+.cart-button{
+    width:100%;
+    padding:10px;
+    border:0;
+    border-radius:8px;
+    background:var(--main);
+    color:#fff;
+}
+
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.media-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.media-item,
+.video-item{
+    background:#fff;
+    padding:10px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.media-item img,
+.video-item video{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.media-item figcaption,
+.video-item h3{
+    padding:10px;
+}
+
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-container{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.cart-item{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.cart-item img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.cart-summary{
+    background:#fff;
+    padding:25px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    height:max-content;
+}
+
+.cart-summary p{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+}
+
+.total{
+    border-top:1px solid var(--border);
+    font-size:1.2rem;
+}
+
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.remote-order-card,
+.checkout-form,
+.management-form,
+.permission-card,
+.account-form,
+.contact-form{
+    padding:30px;
+}
+
+fieldset{
+    border:1px solid var(--border);
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+legend{
+    padding:0 10px;
+    font-weight:bold;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.full-width{
+    grid-column:1/-1;
+}
+
+textarea{
+    resize:vertical;
+}
+
+
+
+/* =========================================================
+   TRACKING
+========================================================= */
+
+.tracking-card{
+    padding:30px;
+}
+
+.tracking-card header{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.order-progress{
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    gap:15px;
+}
+
+.order-progress li{
+    flex:1;
+    text-align:center;
+    position:relative;
+}
+
+.order-progress span{
+    display:block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin:auto;
+    border-radius:50%;
+    background:#cbd5e1;
+}
+
+.order-progress .completed span{
+    background:var(--success);
+    color:#fff;
+}
+
+.tracking-card mark{
+    padding:5px 10px;
+    border-radius:6px;
+}
+
+
+
+/* =========================================================
+   EMPLOYEE
+========================================================= */
+
+.employee-card{
+    overflow:hidden;
+}
+
+.employee-card-header,
+.employee-card-footer,
+.invoice-header,
+.invoice-footer,
+.card-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+    background:#f8fafc;
+}
+
+.employee-card-body{
+    padding:25px;
+    display:flex;
+    gap:30px;
+}
+
+.employee-photo{
+    width:180px;
+}
+
+.employee-photo img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.employee-information{
+    flex:1;
+}
+
+.employee-information dl{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.employee-information dl div{
+    padding:10px;
+    background:#f8fafc;
+    border-radius:8px;
+}
+
+.employee-information dt{
+    color:var(--gray);
+}
+
+.employee-information dd{
+    font-weight:bold;
+}
+
+
+
+/* =========================================================
+   PERMISSION
+========================================================= */
+
+.approval-area{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin:25px 0;
+}
+
+.signature-line{
+    height:40px;
+    border-bottom:1px solid #222;
+}
+
+
+
+/* =========================================================
+   ACCOUNT
+========================================================= */
+
+.account-form{
+    max-width:550px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.account-form button{
+    padding:12px;
+    border:0;
+    border-radius:8px;
+    background:var(--main);
+    color:#fff;
+}
+
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.review-card{
+    text-align:center;
+}
+
+
+
+/* =========================================================
+   INVOICE
+========================================================= */
+
+.invoice-card{
+    overflow:hidden;
+}
+
+.invoice-customer{
+    padding:25px;
+}
+
+.invoice-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.invoice-card th,
+.invoice-card td{
+    padding:13px;
+    border:1px solid var(--border);
+    text-align:center;
+}
+
+.invoice-card th{
+    background:#f1f5f9;
+}
+
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-information,
+.contact-form{
+    background:#fff;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.contact-information p{
+    margin:12px 0;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+    background:var(--dark);
+    color:#fff;
+    padding:50px 4% 20px;
+}
+
+.footer-grid{
+    width:min(var(--width),100%);
+    margin:auto;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.footer-grid section,
+.footer-grid nav{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.footer-grid h2{
+    margin-bottom:10px;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #ffffff22;
+    margin-top:35px;
+    padding-top:20px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .features-section,
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .products-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .media-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-section{
+        padding:35px;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .site-header{
+        position:static;
+    }
+
+    .top-header{
+        flex-wrap:wrap;
+        padding:15px 0;
+    }
+
+    .search-form{
+        order:3;
+        flex-basis:100%;
+        max-width:none;
+    }
+
+    .main-navigation ul{
+        justify-content:flex-start;
+        overflow:auto;
+        flex-wrap:nowrap;
+    }
+
+    .main-navigation a{
+        white-space:nowrap;
+    }
+
+    .hero-section,
+    .offer-section,
+    .featured-product{
+        flex-direction:column;
+        padding:25px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem;
+    }
+
+    .product-layout,
+    .cart-container,
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .filter-sidebar{
+        width:100%;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+
+    .employee-card-body{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .employee-information{
+        width:100%;
+    }
+
+    .employee-information dl{
+        grid-template-columns:1fr;
+    }
+
+    .approval-area{
+        grid-template-columns:1fr;
+    }
+
+    .tracking-card{
+        overflow:auto;
+    }
+
+    .order-progress{
+        min-width:600px;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .features-section,
+    .category-grid,
+    .products-grid,
+    .media-grid,
+    .reviews-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .top-header{
+        justify-content:center;
+    }
+
+    .header-actions{
+        width:100%;
+        justify-content:space-around;
+    }
+
+    .hero-section{
+        margin-top:25px;
+    }
+
+    .content-section,
+    .features-section,
+    .offer-section,
+    .featured-product,
+    .management-section,
+    .checkout-section,
+    .account-section,
+    .reviews-section,
+    .contact-section,
+    .cart-section{
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+
+    .section-header h2{
+        font-size:1.6rem;
+    }
+
+    .cart-item{
+        align-items:flex-start;
+    }
+
+    .cart-item img{
+        width:75px;
+        height:75px;
+    }
+
+    .invoice-card{
+        overflow:auto;
+    }
+
+    .invoice-card table{
+        min-width:600px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* الأزرار والروابط */
+a,
+button{
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+button:hover,
+.primary-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px #0003;
+}
+
+button:active,
+.primary-button:active{
+    transform:translateY(1px) scale(.97);
+}
+
+a:hover{
+    color:#2563eb;
+}
+
+a:active{
+    transform:scale(.96);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+    outline:3px solid #93c5fd;
+    outline-offset:3px;
+}
+
+
+/* روابط القائمة */
+.main-navigation a{
+    position:relative;
+    transition:.25s;
+}
+
+.main-navigation a::after{
+    content:"";
+    position:absolute;
+    right:15px;
+    left:15px;
+    bottom:5px;
+    height:3px;
+    background:#38bdf8;
+    transform:scaleX(0);
+    transition:.25s;
+}
+
+.main-navigation a:hover{
+    background:#1e40af;
+    color:#fff;
+}
+
+.main-navigation a:hover::after{
+    transform:scaleX(1);
+}
+
+.main-navigation a:active{
+    background:#172554;
+}
+
+
+/* الأزرار */
+.primary-button{
+    background:#2563eb;
+}
+
+.primary-button:hover{
+    background:#1d4ed8;
+}
+
+.primary-button:active{
+    background:#1e3a8a;
+}
+
+.secondary-button:hover{
+    background:#cbd5e1;
+    color:#111827;
+}
+
+
+/* بطاقات المنتجات */
+.product-card{
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px #0002;
+    border-color:#60a5fa;
+}
+
+.product-card:active{
+    transform:translateY(-2px) scale(.99);
+}
+
+
+/* زر السلة */
+.cart-button:hover{
+    background:#16a34a;
+    box-shadow:0 7px 15px #16a34a55;
+}
+
+.cart-button:active{
+    background:#15803d;
+    transform:scale(.96);
+}
+
+
+/* الأقسام */
+#categories{
+    background:#eff6ff;
+    padding:40px;
+    border-radius:20px;
+}
+
+#products{
+    background:#f0fdf4;
+    padding:40px;
+    border-radius:20px;
+}
+
+#offers{
+    background:#fff7ed;
+}
+
+#gallery{
+    background:#fdf4ff;
+    padding:40px;
+    border-radius:20px;
+}
+
+#videos{
+    background:#ecfeff;
+    padding:40px;
+    border-radius:20px;
+}
+
+#cart{
+    background:#fff1f2;
+    padding:40px;
+    border-radius:20px;
+}
+
+#remote{
+    background:#f0fdfa;
+    padding:40px;
+    border-radius:20px;
+}
+
+#checkout{
+    background:#eef2ff;
+    padding:40px;
+    border-radius:20px;
+}
+
+#tracking{
+    background:#fefce8;
+    padding:40px;
+    border-radius:20px;
+}
+
+#jobs{
+    background:#faf5ff;
+    padding:40px;
+    border-radius:20px;
+}
+
+#account{
+    background:#f8fafc;
+    padding:40px;
+    border-radius:20px;
+}
+
+#contact{
+    background:#ecfdf5;
+    padding:40px;
+    border-radius:20px;
+}
+
+
+/* بطاقات الأقسام */
+.category-card{
+    transition:.25s;
+}
+
+.category-card:hover{
+    transform:translateY(-7px) scale(1.02);
+    box-shadow:0 15px 30px #0002;
+}
+
+.category-card:active{
+    transform:scale(.98);
+}
+
+
+/* الصور */
+.media-item img,
+.category-card img,
+.product-image img{
+    transition:
+        transform .4s ease,
+        filter .3s ease;
+}
+
+.media-item:hover img,
+.category-card:hover img,
+.product-card:hover .product-image img{
+    transform:scale(1.05);
+    filter:brightness(1.08);
+}
+
+
+/* الفيديو */
+.video-item{
+    transition:.25s;
+}
+
+.video-item:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px #0002;
+}
+
+
+/* الحقول */
+input,
+select,
+textarea{
+    transition:
+        border-color .2s,
+        box-shadow .2s,
+        background .2s;
+}
+
+input:hover,
+select:hover,
+textarea:hover{
+    border-color:#94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px #2563eb22;
+    background:#fff;
+}
+
+
+/* التقييم */
+.rating{
+    transition:.2s;
+}
+
+.rating:hover{
+    transform:scale(1.08);
+}
+
+
+/* البطاقات العامة */
+.feature-card,
+.review-card,
+.tracking-card,
+.invoice-card,
+.employee-card{
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.feature-card:hover,
+.review-card:hover,
+.tracking-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px #0002;
+}
+
+
+/* الروابط في الفوتر */
+.site-footer a{
+    transition:.25s;
+}
+
+.site-footer a:hover{
+    color:#38bdf8;
+    padding-right:7px;
+}
+
+
+/* حالة النقر */
+a:active,
+button:active{
+    opacity:.8;
+}
+
+
+/* تحديد النص */
+::selection{
+    background:#2563eb;
+    color:#fff;
+}
+</style> 
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <div class="top-header">
+
+        <a href="#home" class="logo">
+
+            <img src="images/image1.jpg"
+                 alt="شعار المتجر">
+
+            <span>متجري</span>
+
+        </a>
+
+
+        <form class="search-form"
+              action="#products">
+
+            <label for="search">
+                البحث
+            </label>
+
+            <input type="search"
+                   id="search"
+                   name="search"
+                   placeholder="ابحث عن منتج">
+
+            <button type="submit">
+                بحث
+            </button>
+
+        </form>
+
+
+        <nav class="header-actions">
+
+            <a href="#account">
+                👤
+                <span>حسابي</span>
+            </a>
+
+            <a href="#cart">
+                🛒
+                <span>السلة</span>
+            </a>
+
+            <a href="#tracking">
+                📦
+                <span>طلباتي</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <nav class="main-navigation">
+
+        <ul>
+
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#categories">الأقسام</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#offers">العروض</a></li>
+            <li><a href="#gallery">الصور</a></li>
+            <li><a href="#videos">الفيديوهات</a></li>
+            <li><a href="#remote">طلب عن بعد</a></li>
+            <li><a href="#jobs">التوظيف</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-section" id="home">
+
+    <article class="hero-content">
+
+        <p class="small-title">
+            أهلاً بكم في متجرنا
+        </p>
+
+        <h1>
+            كل ما تحتاجه
+            <br>
+            في مكان واحد
+        </h1>
+
+        <p class="hero-description">
+
+            متجر متكامjpعرض المنتجات
+            واستقبال طلبات العملاء
+            وإدارة بيانات الموظفين.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products"
+               class="primary-button">
+                المنتجات
+            </a>
+
+            <a href="#remote"
+               class="secondary-button">
+                اطلب الآن
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <figure class="hero-image">
+
+        <img src="images/image2.jpg"
+             alt="صورة المتجر">
+
+        <figcaption>
+            متجرنا الإلكتروني
+        </figcaption>
+
+    </figure>
+
+</section>
+
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section">
+
+    <article class="feature-card">
+
+        <span class="feature-icon">🚚</span>
+
+        <h2>توصيل سريع</h2>
+
+        <p>
+            خدمة توصيل للطلبات.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <span class="feature-icon">🔒</span>
+
+        <h2>تسوق آمن</h2>
+
+        <p>
+            تنظيم بيانات العملاء.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <span class="feature-icon">⭐</span>
+
+        <h2>منتجات متنوعة</h2>
+
+        <p>
+            العديد من المنتجات.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <span class="feature-icon">📞</span>
+
+        <h2>خدمة العملاء</h2>
+
+        <p>
+            تواصل معنا بسهولة.
+        </p>
+
+    </article>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="content-section"
+         id="categories">
+
+    <header class="section-header">
+
+        <p>الأقسام</p>
+
+        <h2>
+            أقسام المتجر
+        </h2>
+
+    </header>
+
+
+    <div class="category-grid">
+
+
+        <article class="category-card">
+
+            <figure>
+
+                <img src="images/image3.jpg"
+                     alt="الإلكترونيات">
+
+                <figcaption>
+                    الإلكترونيات
+                </figcaption>
+
+            </figure>
+
+            <p>
+                أجهزة وإكسسوارات إلكترونية.
+            </p>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <figure>
+
+                <img src="images/image4.jpg"
+                     alt="الملابس">
+
+                <figcaption>
+                    الملابس
+                </figcaption>
+
+            </figure>
+
+            <p>
+                ملابس متنوعة.
+            </p>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <figure>
+
+                <img src="images/image5.jpg"
+                     alt="الأحذية">
+
+                <figcaption>
+                    الأحذية
+                </figcaption>
+
+            </figure>
+
+            <p>
+                أحذية رياضية وعصرية.
+            </p>
+
+        </article>
+
+
+        <article class="category-card">
+
+            <figure>
+
+                <img src="images/image6.jpg"
+                     alt="الإكسسوارات">
+
+                <figcaption>
+                    الإكسسوارات
+                </figcaption>
+
+            </figure>
+
+            <p>
+                إكسسوارات متنوعة.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="offer-section"
+         id="offers">
+
+    <figure class="offer-image">
+
+        <img src="images/image.jpg"
+             alt="عرض خاص">
+
+    </figure>
+
+
+    <article class="offer-content">
+
+        <p>عرض خاص</p>
+
+        <h2>
+            عروض مميزة
+        </h2>
+
+        <p>
+            استفد من عروض المتجر.
+        </p>
+
+        <time datetime="2026-10-15">
+          حتى  2026 اكتوبر 33
+<br>
+          <br>
+        <br>
+          
+          <p>العفو منكم يا خبر العرض انتهي ولا عادبة حاجة الخبرطلع كذب </p>
+
+       </time>
+
+        <br><br>
+
+        <a href="#products"
+           class="primary-button">
+            مشاهدة المنتجات
+        </a>
+
+    </article>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="content-section"
+         id="products">
+
+    <header class="section-header">
+
+        <p>منتجاتنا</p>
+
+        <h2>
+            المنتجات
+        </h2>
+
+    </header>
+
+
+    <div class="product-layout">
+
+
+        <aside class="filter-sidebar">
+
+            <h2>
+                التصفية
+            </h2>
+
+
+            <details open>
+
+                <summary>
+                    الأقسام
+                </summary>
+
+                <label>
+                    <input type="checkbox">
+                    إلكترونيات
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    ملابس
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    أحذية
+                </label>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    السعر
+                </summary>
+
+                <label>
+                    <input type="radio"
+                           name="price">
+                    أقل من 50$
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="price">
+                    أكثر من 50$
+                </label>
+
+            </details>
+
+        </aside>
+
+
+
+        <div class="products-grid">
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -20%
+                    </span>
+
+                    <img src="images/image8.jpg"
+                         alt="هاتف ذكي">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        إلكترونيات
+                    </span>
+
+                    <h3>
+                        هاتف ذكي
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            180$
+                        </strong>
+
+                        <del>
+                            225$
+                        </del>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/image9.jpg"
+                         alt="حاسوب محمول">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        إلكترونيات
+                    </span>
+
+                    <h3>
+                        حاسوب محمول
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            650$
+                        </strong>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/image10.jpg"
+                         alt="ساعة ذكية">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        إكسسوارات
+                    </span>
+
+                    <h3>
+                        ساعة ذكية
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            95$
+                        </strong>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/image11.jpg"
+                         alt="سماعات">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        إلكترونيات
+                    </span>
+
+                    <h3>
+                        سماعات لاسلكية
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            45$
+                        </strong>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/image12.jpg"
+                         alt="قميص">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        ملابس
+                    </span>
+
+                    <h3>
+                        قميص رجالي
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            35$
+                        </strong>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img src="images/image13.webp"
+                         alt="حذاء">
+
+                </div>
+
+                <div class="product-details">
+
+                    <span class="product-category">
+                        أحذية
+                    </span>
+
+                    <h3>
+                        حذاء رياضي
+                    </h3>
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            70$
+                        </strong>
+
+                    </div>
+
+                    <button class="cart-button">
+                        إضافة للسلة
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="content-section"
+         id="gallery">
+
+    <header class="section-header">
+
+        <p>المعرض</p>
+
+        <h2>
+            صور المتجر
+        </h2>
+
+    </header>
+
+
+    <div class="media-grid">
+
+
+        <figure class="media-item">
+
+            <img src="images/image14.jpg"
+                 alt="صورة المتجر">
+
+            <figcaption>
+                المتجر
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="media-item">
+
+            <img src="images/image15.jpg"
+                 alt="المنتجات">
+
+            <figcaption>
+                المنتجات
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="media-item">
+
+            <img src="images/image16.webp"
+                 alt="عرض المنتجات">
+
+            <figcaption>
+                عرض المنتجات
+            </figcaption>
+
+        </figure>
+
+
+        <figure class="media-item">
+
+            <img src="images/image17.jpg"
+                 alt="منتجات جديدة">
+
+            <figcaption>
+                منتجات جديدة
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= VIDEOS ================= -->
+
+<section class="content-section"
+         id="videos">
+
+    <header class="section-header">
+
+        <p>الفيديو</p>
+
+        <h2>
+            فيديوهات المتجر
+        </h2>
+
+    </header>
+
+
+    <div class="media-grid">
+
+
+        <article class="video-item">
+
+            <video controls
+                   poster="images/image18.jpg">
+
+                <source src="images/vid1.mp4"
+                        type="video/mp4">
+
+                المتصفح لا يدعم الفيديو.
+
+            </video>
+
+            <h3>
+                جولة داخل المتجر
+            </h3>
+
+        </article>
+
+
+        <article class="video-item">
+
+            <video controls
+                   poster="images/image19.jpg">
+
+                <source src="images/vid2.mp4"
+                        type="video/mp4">
+
+                المتصفح لا يدعم الفيديو.
+
+            </video>
+
+            <h3>
+                منتجات المتجر
+            </h3>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CART ================= -->
+
+<section class="cart-section"
+         id="cart">
+
+    <header class="section-header">
+
+        <p>المشتريات</p>
+
+        <h2>
+            سلة المشتريات
+        </h2>
+
+    </header>
+
+
+    <div class="cart-container">
+
+
+        <div>
+
+            <article class="cart-item">
+
+                <img src="images/image8.jpg"
+                     alt="هاتف">
+
+                <div>
+
+                    <h3>
+                        هاتف ذكي
+                    </h3>
+
+                    <p>
+                        الكمية: 1
+                    </p>
+
+                    <strong>
+                        180$
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="cart-item">
+
+                <img src="images/image11.jpg"
+                     alt="سماعات">
+
+                <div>
+
+                    <h3>
+                        سماعات
+                    </h3>
+
+                    <p>
+                        الكمية: 1
+                    </p>
+
+                    <strong>
+                        45$
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <aside class="cart-summary">
+
+            <h2>
+                ملخص الطلب
+            </h2>
+
+            <p>
+                <span>المجموع</span>
+                <strong>225$</strong>
+            </p>
+
+            <p>
+                <span>التوصيل</span>
+                <strong>10$</strong>
+            </p>
+
+            <p class="total">
+                <span>الإجمالي</span>
+                <strong>235$</strong>
+            </p>
+
+            <a href="#checkout"
+               class="primary-button">
+                إتمام الطلب
+            </a>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REMOTE ORDER ================= -->
+
+<section class="management-section"
+         id="remote">
+
+    <header class="section-header">
+
+        <p>خدمة العملاء</p>
+
+        <h2>
+            طلب العميل عن بُعد
+        </h2>
+
+    </header>
+
+
+    <form class="remote-order-card">
+
+
+        <fieldset>
+
+            <legend>
+                بيانات العميل
+            </legend>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="customer-name">
+                        الاسم
+                    </label>
+
+                    <input type="text"
+                           id="customer-name"
+                           name="customer-name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customer-phone">
+                        رقم الهاتف
+                    </label>
+
+                    <input type="tel"
+                           id="customer-phone"
+                           name="customer-phone"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customer-email">
+                        البريد الإلكتروني
+                    </label>
+
+                    <input type="email"
+                           id="customer-email"
+                           name="customer-email">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customer-city">
+                        المدينة
+                    </label>
+
+                    <input type="text"
+                           id="customer-city"
+                           name="customer-city"
+                           required>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="customer-address">
+                        عنوان التوصيل
+                    </label>
+
+                    <textarea id="customer-address"
+                              name="customer-address"
+                              rows="4"
+                              required></textarea>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="order-details">
+                        تفاصيل الطلب
+                    </label>
+
+                    <textarea id="order-details"
+                              name="order-details"
+                              rows="5"
+                              required></textarea>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+
+
+        <button type="submit"
+                class="primary-button">
+
+            إرسال الطلب
+
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section class="checkout-section"
+         id="checkout">
+
+    <header class="section-header">
+
+        <p>إتمام الشراء</p>
+
+        <h2>
+            بيانات الدفع والتوصيل
+        </h2>
+
+    </header>
+
+
+    <form class="checkout-form">
+
+
+        <fieldset>
+
+            <legend>
+                بيانات العميل
+            </legend>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="buyer-name">
+                        الاسم الكامل
+                    </label>
+
+                    <input type="text"
+                           id="buyer-name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="buyer-phone">
+                        الهاتف
+                    </label>
+
+                    <input type="tel"
+                           id="buyer-phone"
+                           required>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="buyer-address">
+                        العنوان
+                    </label>
+
+                    <textarea id="buyer-address"
+                              rows="3"
+                              required></textarea>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>
+                طريقة الدفع
+            </legend>
+
+
+            <label>
+
+                <input type="radio"
+                       name="payment"
+                       required>
+
+                الدفع عند الاستلام
+
+            </label>
+
+
+            <label>
+
+                <input type="radio"
+                       name="payment">
+
+                تحويل بنكي
+
+            </label>
+
+        </fieldset>
+
+
+        <button type="submit"
+                class="primary-button">
+
+            تأكيد الطلب
+
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= ORDER TRACKING ================= -->
+
+<section class="content-section"
+         id="tracking">
+
+    <header class="section-header">
+
+        <p>الطلبات</p>
+
+        <h2>
+            متابعة الطلب
+        </h2>
+
+    </header>
+
+
+    <article class="tracking-card">
+
+
+        <header>
+
+            <div>
+
+                <strong>
+                    رقم الطلب
+                </strong>
+
+                <span>
+                    #10025
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    تاريخ الطلب
+                </strong>
+
+                <time datetime="2026-09-29">
+                    29 سبتمبر 2026
+                </time>
+
+            </div>
+
+        </header>
+
+
+        <ol class="order-progress">
+
+
+            <li class="completed">
+
+                <span>✓</span>
+
+                <strong>
+                    تم الطلب
+                </strong>
+
+            </li>
+
+
+            <li class="completed">
+
+                <span>✓</span>
+
+                <strong>
+                    قيد التجهيز
+                </strong>
+
+            </li>
+
+
+            <li>
+
+                <span>3</span>
+
+                <strong>
+                    خرج للتوصيل
+                </strong>
+
+            </li>
+
+
+            <li>
+
+                <span>4</span>
+
+                <strong>
+                    تم التسليم
+                </strong>
+
+            </li>
+
+
+        </ol>
+
+
+        <footer>
+
+            حالة الطلب:
+            <mark>
+                قيد التجهيز
+            </mark>
+
+        </footer>
+
+
+    </article>
+
+</section>
+
+
+
+<!-- ================= EMPLOYEE JOB APPLICATION ================= -->
+
+<section class="management-section"
+         id="jobs">
+
+    <header class="section-header">
+
+        <p>العمل معنا</p>
+
+        <h2>
+            طلب توظيف
+        </h2>
+
+    </header>
+
+
+    <form class="management-form">
+
+
+        <fieldset>
+
+            <legend>
+                بيانات المتقدم
+            </legend>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="employee-name">
+                        الاسم الكامل
+                    </label>
+
+                    <input type="text"
+                           id="employee-name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="employee-phone">
+                        رقم الهاتف
+                    </label>
+
+                    <input type="tel"
+                           id="employee-phone"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="employee-email">
+                        البريد الإلكتروني
+                    </label>
+
+                    <input type="email"
+                           id="employee-email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="employee-job">
+                        الوظيفة المطلوبة
+                    </label>
+
+                    <select id="employee-job">
+
+                        <option>
+                            موظف مبيعات
+                        </option>
+
+                        <option>
+                            محاسب
+                        </option>
+
+                        <option>
+                            خدمة عملاء
+                        </option>
+
+                        <option>
+                            مسؤول مخزن
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="employee-cv">
+                        السيرة الذاتية
+                    </label>
+
+                    <textarea id="employee-cv"
+                              rows="6"></textarea>
+
+                </div>
+
+            </div>
+
+        </fieldset>
+
+
+        <button type="submit"
+                class="primary-button">
+
+            إرسال طلب التوظيف
+
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= EMPLOYEE CARD ================= -->
+
+<section class="management-section">
+
+    <article class="employee-card">
+
+
+        <header class="employee-card-header">
+
+            <div>
+
+                <h2>
+                    بطاقة موظف
+                </h2>
+
+                <p>
+                    بيانات الموظف
+                </p>
+
+            </div>
+
+            <strong>
+                EMP-001
+            </strong>
+
+        </header>
+
+
+        <div class="employee-card-body">
+
+
+            <figure class="employee-photo">
+
+                <img src="images/image20.jpg"
+                     alt="صورة الموظف">
+
+                <figcaption>
+                    صورة الموظف
+                </figcaption>
+
+            </figure>
+
+
+            <div class="employee-information">
+
+
+                <dl>
+
+
+                    <div>
+
+                        <dt>
+                            الاسم
+                        </dt>
+
+                        <dd>
+                            اسم الموظف
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            القسم
+                        </dt>
+
+                        <dd>
+                            المبيعات
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            الوظيفة
+                        </dt>
+
+                        <dd>
+                            موظف مبيعات
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            رقم الموظف
+                        </dt>
+
+                        <dd>
+                            EMP-001
+                        </dd>
+
+                    </div>
+
+
+                    <div>
+
+                        <dt>
+                            تاريخ التعيين
+                        </dt>
+
+                        <dd>
+                            2026
+                        </dd>
+
+                    </div>
+
+
+                </dl>
+
+            </div>
+
+        </div>
+
+
+        <footer class="employee-card-footer">
+
+     
